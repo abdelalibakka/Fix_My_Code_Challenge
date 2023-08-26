@@ -1,10 +1,9 @@
-Copy code
 #!/usr/bin/node
 
 /*
     Print a square with the character #
-
-    The size of the square must be the first argument
+    
+    The size of the square must be the first argument 
     of the program.
 */
 
@@ -22,8 +21,10 @@ if (isNaN(size) || size <= 0) {
     process.exit(1);
 }
 
-const row = "#".repeat(size); // Create a row of # characters
-
 for (let i = 0; i < size; i++) {
-    console.log(row); // Print the row 'size' number of times
+    let row = "";
+    for (let j = 0; j < size; j++) {
+        row += "#";
+    }
+    console.log(row);
 }
